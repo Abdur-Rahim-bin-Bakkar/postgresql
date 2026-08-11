@@ -18,7 +18,7 @@ model User {
   email    String   @unique
   password String
   role     UserRole @default(User)
-  orders Orders[]
+  orders   Orders[]
 
   @@map("users")
 }
@@ -30,7 +30,7 @@ enum UserRole {
 }
 
 model Product {
-  id          String   @id @default(uuid())
+  id          String  @id @default(uuid())
   title       String
   description String?
   price       Int
@@ -43,5 +43,10 @@ model Orders {
   id     String @id @default(uuid())
   userId String
   // user   User   @relation(fields: [userId], references: [id])
-  user User @relation( fields: [userId], references: [id])
+  user   User   @relation(fields: [userId], references: [id])
+}
+
+model Newproducts {
+  id String @id @default(uuid())
+  name String
 }
