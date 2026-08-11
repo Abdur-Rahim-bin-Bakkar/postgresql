@@ -114,6 +114,7 @@ Run:
 ```bash
 npx prisma migrate dev --name init
 npx prisma generate
+npx prisma studio
 ```
 
 ## 8. prisma.ts
@@ -218,6 +219,7 @@ npx prisma studio
 npx prisma generate
 npx prisma migrate dev --name update
 npx prisma migrate reset
+npx prisma studio
 ```
 
 ## 15. API Endpoints
